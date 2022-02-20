@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NASADesign</string>
+    <string name="error">Ошибка загрузки</string>
+    <string name="reload">Обновить</string>
 </resources>

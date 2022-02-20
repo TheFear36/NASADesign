@@ -1,8 +1,9 @@
 package com.thefear.nasadesign
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.thefear.nasadesign.ui.main.MainFragment
+import androidx.appcompat.app.AppCompatActivity
+import com.thefear.nasadesign.R
+import com.thefear.nasadesign.ui.screens.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
