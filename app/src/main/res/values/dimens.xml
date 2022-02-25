@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="imageHeight">450dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="NASA_image_size">350dp</dimen>
+    <dimen name="line">1dp</dimen>
+</resources>
