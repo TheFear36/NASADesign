@@ -21,6 +21,7 @@ import toast
 
 class MainFragment : Fragment() {
 
+
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<ConstraintLayout>
