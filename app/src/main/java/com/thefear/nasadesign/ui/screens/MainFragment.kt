@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import coil.load
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.navigation.NavigationView
 import com.thefear.nasadesign.MainActivity
 import com.thefear.nasadesign.R
 import com.thefear.nasadesign.databinding.FragmentMainBinding

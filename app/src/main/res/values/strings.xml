@@ -13,4 +13,9 @@
     <string name="today">Сегодня</string>
     <string name="yesterday">Вчера</string>
     <string name="before_yesterday">Позавчера</string>
+    <string name="yellow_theme_str">Желтая тема</string>
+    <string name="red_theme_str">Красная тема</string>
+    <string name="blue_theme_str">Синяя тема</string>
+    <string name="green_theme_str">Зеленая тема</string>
+    <string name="choice_theme">Выберите тему</string>
 </resources>

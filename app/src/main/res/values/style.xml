@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="myBottomAppbarStyle" parent="Widget.MaterialComponents.BottomAppBar">
+        <item name="colorSurface">?myColor_600</item>
+    </style>
+
+    <style name="myFloatingActionButtonStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/dark_blue</item>
+    </style>
+
+    <style name="myFloatingActionButtonStyleNight" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/yellow_800</item>
+    </style>
+
+    <style name="mySmallShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">15dp</item>
+    </style>
+
+    <style name="myTextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearance">@style/mySmallShapeAppearance</item>
+    </style>
+
+    <style name="myChips" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="shapeAppearanceSmallComponent">@style/mySmallShapeAppearance</item>
+    </style>
+
+    <style name="myRadioButtonStyle" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="fontFamily">@font/caudex_bold_italic</item>
+    </style>
+
+    <style name="myMaterialCardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">?myColor_300</item>
+        <item name="strokeColor">@color/dark_blue</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="shapeAppearance">@style/mySmallShapeAppearance</item>
+    </style>
+
+</resources>
