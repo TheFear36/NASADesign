@@ -3,13 +3,14 @@ package com.thefear.nasadesign.ui.screens
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import coil.load
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.thefear.nasadesign.MainActivity
 import com.thefear.nasadesign.R
 import com.thefear.nasadesign.databinding.FragmentMainBinding
 import com.thefear.nasadesign.viewmodel.AppState
@@ -17,7 +18,6 @@ import com.thefear.nasadesign.viewmodel.MainViewModel
 import hide
 import show
 import snack
-import toast
 
 class MainFragment : Fragment() {
 
@@ -39,7 +39,6 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = with(binding) {
         super.onViewCreated(view, savedInstanceState)
-        loadInterface()
         loadData()
         loadClickListeners()
     }
@@ -68,26 +67,6 @@ class MainFragment : Fragment() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) = with(binding) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.menu_bottom_bar, menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-           R.id.app_bar_fav -> {
-               requireContext().toast(R.string.favorite)
-           }
-           R.id.app_bar_settings -> {
-               openFragment(SettingsFragment.newInstance())
-           }
-            android.R.id.home -> {
-                BottomNavigationFragment().show(requireActivity().supportFragmentManager, "")
-            }
-        }
-        return false
-    }
-
     private fun clickOnEndIcon() = with(binding) {
         startActivity(Intent(Intent.ACTION_VIEW).apply {
             data = Uri.parse("https://material.io/search.html?q=${inputEditText.text.toString()}")
@@ -104,10 +83,6 @@ class MainFragment : Fragment() {
         viewModel.sendServerRequest()
     }
 
-    private fun loadInterface() = with(binding) {
-        setHasOptionsMenu(true)
-        (requireActivity() as MainActivity).setSupportActionBar(bottomAppBar)
-    }
     private fun loadClickListeners() = with(binding) {
         imageNASA.setOnClickListener {
             clickOnNASAIcon()
@@ -116,15 +91,6 @@ class MainFragment : Fragment() {
             clickOnEndIcon()
         }
     }
-
-    private fun openFragment(fragment: Fragment) {
-        requireActivity().supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.container, fragment)
-            .addToBackStack(null)
-            .commit()
-    }
-
 
     companion object {
         fun newInstance() = MainFragment()

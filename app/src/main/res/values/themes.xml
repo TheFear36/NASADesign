@@ -22,6 +22,7 @@
         <item name="materialCardViewStyle">@style/myMaterialCardViewStyle</item>
         <item name="radioButtonStyle">@style/myRadioButtonStyle</item>
         <item name="fontFamily">@font/allura</item>
+        <item name="bottomNavigationStyle">@style/myBottomNavigationStyle</item>
 
         <item name="myColor_100">@color/yellow_100</item>
         <item name="myColor_200">@color/yellow_200</item>

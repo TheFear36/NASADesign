@@ -3,5 +3,6 @@
     <dimen name="imageHeight">450dp</dimen>
     <dimen name="default_padding">16dp</dimen>
     <dimen name="NASA_image_size">350dp</dimen>
+    <dimen name="low_dp">5dp</dimen>
     <dimen name="line">1dp</dimen>
 </resources>

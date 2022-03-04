@@ -118,7 +118,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+<!--
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
@@ -137,7 +137,7 @@
         android:contentDescription="@string/settings"
         app:layout_anchor="@id/bottomAppBar"
         app:srcCompat="@drawable/ic_plus_fab"
-        app:tint="#FFFFFF" />
+        app:tint="#FFFFFF" />-->
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -9,9 +9,9 @@
         <item name="backgroundTint">@color/dark_blue</item>
     </style>
 
-    <style name="myFloatingActionButtonStyleNight" parent="Widget.MaterialComponents.FloatingActionButton">
+<!--    <style name="myFloatingActionButtonStyleNight" parent="Widget.MaterialComponents.FloatingActionButton">
         <item name="backgroundTint">@color/yellow_800</item>
-    </style>
+    </style>-->
 
     <style name="mySmallShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamilyTopLeft">rounded</item>
@@ -37,6 +37,14 @@
         <item name="strokeColor">@color/dark_blue</item>
         <item name="strokeWidth">2dp</item>
         <item name="shapeAppearance">@style/mySmallShapeAppearance</item>
+    </style>
+
+    <style name="voidTabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="myBottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="backgroundTint">?myColor_600</item>
     </style>
 
 </resources>

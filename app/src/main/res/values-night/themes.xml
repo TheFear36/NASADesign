@@ -16,7 +16,7 @@
         <item name="colorOnTertiaryContainer">?myThirdColor_100</item>
         <item name="colorSurface">?myColor_600</item>
 
-        <item name="floatingActionButtonStyle">@style/myFloatingActionButtonStyleNight</item>
+<!--        <item name="floatingActionButtonStyle">@style/myFloatingActionButtonStyleNight</item>-->
         <item name="textInputStyle">@style/myTextInputStyle</item>
 
         <item name="myColor_100">@color/yellow_100</item>

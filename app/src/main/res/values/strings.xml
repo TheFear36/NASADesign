@@ -18,4 +18,7 @@
     <string name="blue_theme_str">Синяя тема</string>
     <string name="green_theme_str">Зеленая тема</string>
     <string name="choice_theme">Выберите тему</string>
+    <string name="sun_system">Солнечная система</string>
+    <string name="picture_of_the_day">Картинка дня</string>
+    <string name="picture_from_NASA">Картинка с НАСА</string>
 </resources>
