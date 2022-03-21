@@ -11,8 +11,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MainViewModel(
-        private val liveData: MutableLiveData<AppState> = MutableLiveData(),
-        private val repository: RemoteRepositoryImpl = RemoteRepositoryImpl()
+    private val liveData: MutableLiveData<AppState> = MutableLiveData(),
+    private val repository: RemoteRepositoryImpl = RemoteRepositoryImpl()
 ) : ViewModel() {
 
     fun getLiveData(): LiveData<AppState> {
@@ -21,27 +21,27 @@ class MainViewModel(
 
     fun sendServerRequest() {
         liveData.value = AppState.Loading
-        repository.getRetrofitImpl().getPictureOfTheToday(BuildConfig.NASA_API_KEY).enqueue(
-                object : Callback<DTONasa> {
-                    override fun onResponse(call: Call<DTONasa>, response: Response<DTONasa>) {
-                        if (response.isSuccessful) {
-                            response.body()?.let {
-                                liveData.value = AppState.Success(it)
-                            }
-                        } else {
-                            val message = response.message()
-                            if (message.isNullOrEmpty()) {
-                                liveData.value = AppState.Error(Throwable("Unidentified error"))
+        repository.getPictureOfTheToday(PODCallback)
+    }
 
-                            }
-                        }
-                    }
-
-                    override fun onFailure(call: Call<DTONasa>, t: Throwable) {
-                        liveData.value = AppState.Error(t)
-                    }
+    private val PODCallback = object : Callback<DTONasa> {
+        override fun onResponse(call: Call<DTONasa>, response: Response<DTONasa>) {
+            if (response.isSuccessful) {
+                response.body()?.let {
+                    liveData.value = AppState.Success(it)
                 }
-        )
+            } else {
+                val message = response.message()
+                if (message.isNullOrEmpty()) {
+                    liveData.value = AppState.Error(Throwable("Unidentified error"))
+
+                }
+            }
+        }
+        override fun onFailure(call: Call<DTONasa>, t: Throwable) {
+            liveData.value = AppState.Error(t)
+
+        }
     }
 
 }
