@@ -8,6 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class RemoteRepositoryImpl {
     private val baseUrl = "https://api.nasa.gov/"
+    private val apiKey = BuildConfig.NASA_API_KEY
 
     private val api by lazy {
         Retrofit.Builder()
@@ -18,6 +19,10 @@ class RemoteRepositoryImpl {
     }
 
     fun getPictureOfTheToday(podCallback: Callback<DTONasa>) {
-        api.getPictureOfTheToday(BuildConfig.NASA_API_KEY).enqueue(podCallback)
+        api.getPictureOfTheToday(apiKey).enqueue(podCallback)
+    }
+
+    fun getPictureOfTheDay(date: String, podCallback: Callback<DTONasa>) {
+        api.getPictureOfTheDay(apiKey, date).enqueue(podCallback)
     }
 }
