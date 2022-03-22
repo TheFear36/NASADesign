@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.thefear.nasadesign.*
 import com.thefear.nasadesign.databinding.FragmentSettingsBinding
+import com.thefear.nasadesign.ui.screens.testsreens.LayoutsFragment
 
 class SettingsFragment : Fragment() {
 
@@ -36,16 +37,8 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) = with(binding) {
         super.onViewCreated(view, savedInstanceState)
-        yellowTheme.setOnClickListener { onRadioButtonClick(yellowTheme) }
-        redTheme.setOnClickListener { onRadioButtonClick(redTheme) }
-        blueTheme.setOnClickListener { onRadioButtonClick(blueTheme) }
-        greenTheme.setOnClickListener { onRadioButtonClick(greenTheme) }
-        when (getCurrentTheme()) {
-            1 -> radioGroup.check(R.id.yellowTheme)
-            2 -> radioGroup.check(R.id.redTheme)
-            3 -> radioGroup.check(R.id.blueTheme)
-            4 -> radioGroup.check(R.id.greenTheme)
-        }
+        setSOKL()
+
     }
 
     private fun onRadioButtonClick(v: View) {
@@ -75,6 +68,20 @@ class SettingsFragment : Fragment() {
         _binding = null
     }
 
+    private fun setSOKL() = with(binding) {
+        yellowTheme.setOnClickListener { onRadioButtonClick(yellowTheme) }
+        redTheme.setOnClickListener { onRadioButtonClick(redTheme) }
+        blueTheme.setOnClickListener { onRadioButtonClick(blueTheme) }
+        greenTheme.setOnClickListener { onRadioButtonClick(greenTheme) }
+        when (getCurrentTheme()) {
+            1 -> radioGroup.check(R.id.yellowTheme)
+            2 -> radioGroup.check(R.id.redTheme)
+            3 -> radioGroup.check(R.id.blueTheme)
+            4 -> radioGroup.check(R.id.greenTheme)
+        }
+        relocateToLayoutFragmentButton.setOnClickListener { openFragment(LayoutsFragment.newInstance())}
+    }
+
     private fun updateTheme() {
         requireActivity().supportFragmentManager
             .beginTransaction()
@@ -94,6 +101,13 @@ class SettingsFragment : Fragment() {
         val sharedPreferences =
             requireActivity().getSharedPreferences(KEY_SP, AppCompatActivity.MODE_PRIVATE)
         return sharedPreferences.getInt(KEY_CURRENT_THEME, -1)
+    }
+
+    private fun openFragment(fragment: Fragment) {
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.container, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 
     companion object {

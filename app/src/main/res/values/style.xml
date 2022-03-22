@@ -43,7 +43,7 @@
         <item name="android:background">@android:color/transparent</item>
     </style>
 
-    <style name="myBottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+    <style name="myBottomNavigationStyle" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="backgroundTint">?myColor_600</item>
     </style>
 
