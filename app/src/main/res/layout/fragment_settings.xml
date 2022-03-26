@@ -61,7 +61,6 @@
                 android:fontFamily="@font/caudex_bold_italic"
                 app:layout_constraintTop_toBottomOf="@id/image"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf=""
                 android:padding="@dimen/default_padding"
                 android:text="@string/choice_theme" />
 
