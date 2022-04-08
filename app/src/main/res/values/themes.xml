@@ -1,16 +1,74 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.NASADesign" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+    <style name="BaseTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">?myColor_600</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="colorPrimaryContainer">?myColor_100</item>
+        <item name="colorOnPrimaryContainer">?myColor_900</item>
+        <item name="colorPrimaryInverse">?myColor_200</item>
+        <item name="colorSecondary">?myColor_600</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">?myColor_100</item>
+        <item name="colorOnSecondaryContainer">?myColor_900</item>
+        <item name="colorTertiary">?myColor_600</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">?myColor_100</item>
+        <item name="colorOnTertiaryContainer">?myColor_900</item>
+        <item name="colorSurface">?myColor_600</item>
+
+        <item name="floatingActionButtonStyle">@style/myFloatingActionButtonStyle</item>
+        <item name="textInputStyle">@style/myTextInputStyle</item>
+        <item name="materialCardViewStyle">@style/myMaterialCardViewStyle</item>
+        <item name="radioButtonStyle">@style/myRadioButtonStyle</item>
+        <item name="fontFamily">@font/allura</item>
+        <item name="bottomNavigationStyle">@style/myBottomNavigationStyle</item>
+
+        <item name="myColor_100">@color/yellow_100</item>
+        <item name="myColor_200">@color/yellow_200</item>
+        <item name="myColor_300">@color/yellow_300</item>
+        <item name="myColor_400">@color/yellow_400</item>
+        <item name="myColor_500">@color/yellow_500</item>
+        <item name="myColor_600">@color/yellow_600</item>
+        <item name="myColor_700">@color/yellow_700</item>
+        <item name="myColor_800">@color/yellow_800</item>
+        <item name="myColor_900">@color/yellow_900</item>
     </style>
+
+    <style name="RedTheme" parent="BaseTheme">
+        <item name="myColor_100">@color/red_100</item>
+        <item name="myColor_200">@color/red_200</item>
+        <item name="myColor_300">@color/red_300</item>
+        <item name="myColor_400">@color/red_400</item>
+        <item name="myColor_500">@color/red_500</item>
+        <item name="myColor_600">@color/red_600</item>
+        <item name="myColor_700">@color/red_700</item>
+        <item name="myColor_800">@color/red_800</item>
+        <item name="myColor_900">@color/red_900</item>
+    </style>
+
+    <style name="BlueTheme" parent="BaseTheme">
+        <item name="myColor_100">@color/indigo_100</item>
+        <item name="myColor_200">@color/indigo_200</item>
+        <item name="myColor_300">@color/indigo_300</item>
+        <item name="myColor_400">@color/indigo_400</item>
+        <item name="myColor_500">@color/indigo_500</item>
+        <item name="myColor_600">@color/indigo_600</item>
+        <item name="myColor_700">@color/indigo_700</item>
+        <item name="myColor_800">@color/indigo_800</item>
+        <item name="myColor_900">@color/indigo_900</item>
+    </style>
+
+    <style name="GreenTheme" parent="BaseTheme">
+        <item name="myColor_100">@color/green_100</item>
+        <item name="myColor_200">@color/green_200</item>
+        <item name="myColor_300">@color/green_300</item>
+        <item name="myColor_400">@color/green_400</item>
+        <item name="myColor_500">@color/green_500</item>
+        <item name="myColor_600">@color/green_600</item>
+        <item name="myColor_700">@color/green_700</item>
+        <item name="myColor_800">@color/green_800</item>
+        <item name="myColor_900">@color/green_900</item>
+    </style>
+
 </resources>

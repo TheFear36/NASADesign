@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="myColor_100">color</attr>
+    <attr name="myColor_200">color</attr>
+    <attr name="myColor_300">color</attr>
+    <attr name="myColor_400">color</attr>
+    <attr name="myColor_500">color</attr>
+    <attr name="myColor_600">color</attr>
+    <attr name="myColor_700">color</attr>
+    <attr name="myColor_800">color</attr>
+    <attr name="myColor_900">color</attr>
+
+    <attr name="mySecondColor_100">color</attr>
+    <attr name="mySecondColor_200">color</attr>
+    <attr name="mySecondColor_300">color</attr>
+    <attr name="mySecondColor_400">color</attr>
+    <attr name="mySecondColor_500">color</attr>
+    <attr name="mySecondColor_600">color</attr>
+    <attr name="mySecondColor_700">color</attr>
+    <attr name="mySecondColor_800">color</attr>
+    <attr name="mySecondColor_900">color</attr>
+
+
+    <attr name="myThirdColor_100">color</attr>
+    <attr name="myThirdColor_200">color</attr>
+    <attr name="myThirdColor_300">color</attr>
+    <attr name="myThirdColor_400">color</attr>
+    <attr name="myThirdColor_500">color</attr>
+    <attr name="myThirdColor_600">color</attr>
+    <attr name="myThirdColor_700">color</attr>
+    <attr name="myThirdColor_800">color</attr>
+    <attr name="myThirdColor_900">color</attr>
+
+</resources>
