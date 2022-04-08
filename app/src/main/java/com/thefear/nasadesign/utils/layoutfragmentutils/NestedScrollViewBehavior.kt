@@ -1,4 +1,4 @@
-package com.thefear.nasadesign.utils
+package com.thefear.nasadesign.utils.layoutfragmentutils
 
 import android.content.Context
 import android.util.AttributeSet
