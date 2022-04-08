@@ -144,15 +144,17 @@
             android:id="@+id/materialButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/tempButton"
+            app:layout_constraintBottom_toTopOf="@+id/relocateToBehaviorLayoutFragmentButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/relocateToMotionLayoutFragmentButton" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/tempButton"
+            android:id="@+id/relocateToBehaviorLayoutFragmentButton"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:text="@string/Behavior"
+            android:textColor="@color/dark_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.thefear.nasadesign.*
 import com.thefear.nasadesign.databinding.FragmentSettingsBinding
+import com.thefear.nasadesign.ui.screens.testsreens.BehaviorFragment
 import com.thefear.nasadesign.ui.screens.testsreens.LayoutsFragment
 
 class SettingsFragment : Fragment() {
@@ -80,6 +81,7 @@ class SettingsFragment : Fragment() {
             4 -> radioGroup.check(R.id.greenTheme)
         }
         relocateToLayoutFragmentButton.setOnClickListener { openFragment(LayoutsFragment.newInstance())}
+        relocateToBehaviorLayoutFragmentButton.setOnClickListener { openFragment(BehaviorFragment.newInstance())}
     }
 
     private fun updateTheme() {
